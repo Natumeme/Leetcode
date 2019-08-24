@@ -32,6 +32,24 @@ if __name__ == '__main__':
 enumerate() 函数用于将一个可遍历的数据对象(如列表、元组或字符串)组合为一个索引序列，
 同时列出数据和数据下标，一般用在 for 循环当中
 '''
-# seq = ['one','two','three']
-# for i,element in enumerate(seq):
-# 	print(i,element)
+
+#对一个列表，既要遍历索引又要遍历元素时
+#方法一,使用for循环
+seq1 = ['one','two','three']
+for i in range(len(seq1)):
+	print(i,seq1[1])
+
+#方法二，使用enumerate
+seq = ['one','two','three']
+for i,element in enumerate(seq):
+	print(i,element)
+
+
+#要统计文件的行数
+#文件大时比较缓慢
+count1 = len(open(filepath,'r').readlines())
+
+#使用enumerate()
+count = 0
+for index,line in enumerate(open(filepath,'r')):
+	count+=1
