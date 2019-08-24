@@ -15,23 +15,23 @@
 
 
 #方法一
-# class Solution:
-# 	def longestCommonPrefix(self,strs):
-# 		if len(strs) == 0:
-# 			return ""
-# 		minlen = min([len(x) for x in strs])
-# 		end = 0
-# 		while end < minlen:
-# 			for i in range(1,len(strs)):
-# 				if strs[i][end] != strs[i-1][end]:
-# 					return strs[0][:end]
-# 			end += 1
-# 		return strs[0][:end]
-#
-# if __name__ == '__main__':
-# 	s=Solution()
-# 	strs=["flower","flow","flight"]
-# 	print(s.longestCommonPrefix(strs))
+class Solution:
+	def longestCommonPrefix(self,strs):
+		if len(strs) == 0:
+			return ""
+		minlen = min([len(x) for x in strs])
+		end = 0
+		while end < minlen:
+			for i in range(1,len(strs)):
+				if strs[i][end] != strs[i-1][end]:
+					return strs[0][:end]
+			end += 1
+		return strs[0][:end]
+
+if __name__ == '__main__':
+	s=Solution()
+	strs=["flower","flow","flight"]
+	print(s.longestCommonPrefix(strs))
 
 #方法二
 class Solution(object):
