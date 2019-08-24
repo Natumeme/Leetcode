@@ -2,20 +2,11 @@
 #-*-coding:utf-8-*-
 
 
-class Solution:
-	def twoSum(self,nums,target):
-		dic=dict()
-		for index,value in enumerate(nums):
-			sub=target-nums[index]
-			if sub in dic:
-				return dic[sub],index
-			else:
-				dic[value]=index
+strs=["flower","flow","flight"]
+s1=min(strs)
+s2=max(strs)
+print(s1)
+print(s2)
 
-if __name__ == '__main__':
-	s=Solution()
-	nums = [2, 7, 11, 15]
-	target=9
-	print(s.twoSum(nums,target))
 
 
