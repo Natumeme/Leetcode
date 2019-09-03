@@ -2,11 +2,8 @@
 #-*-coding:utf-8-*-
 
 
-strs=["flower","flow","flight"]
-s1=min(strs)
-s2=max(strs)
-print(s1)
-print(s2)
+一个方法只能输入0或者1，调用这个方法输出1，1000
+
 
 
 
